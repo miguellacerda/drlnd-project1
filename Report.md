@@ -11,15 +11,15 @@ The environment is solved using a deep Q-network with fixed targets and experien
 1. The experience tuple `(state, action, reward, next state)` is added to the replay buffer
 1. Every fixed number of steps, a sample of experience tuples is drawn from the replay buffer (assuming it contains enough tuples)
 1. The sample is used to update the weights of the local Q-network, which are in turn used to adjust the weights of the target Q-network using a soft-update rule
-1. The state that was obtained in step (3) then becomes the current state and the processes repeats from step (2)
+1. The state that was obtained in step (3) then becomes the current state and the process repeats from step (2)
 
 #### Learning Algorithms
 
 This project considers three variations of the deep Q-learning algorithm:
 
 1. Vanilla DQN with fixed targets and experience replay
-1. Double DQN with fixed targets and experience replay
-1. Double DQN with fixed targets and prioritised experience replay
+1. *Double* DQN with fixed targets and experience replay
+1. *Double* DQN with fixed targets and *prioritised* experience replay
 
 #### Agent Hyperparameters
 
