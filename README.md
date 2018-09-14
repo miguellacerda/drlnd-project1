@@ -1,4 +1,5 @@
-# Udacity Deep Reinforcement Learning Nanodegree: Project 1 - Navigation
+## Udacity Deep Reinforcement Learning Nanodegree 
+## Project 1: Navigation
 
 ### Description of Environment
 
@@ -7,6 +8,7 @@ In this project, an agent is trained to navigate a square world to collect as ma
 The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. The action set contains four discrete actions, namely "move forward" (0), "move backward" (1), "turn left" (2) and "turn right" (3). 
 
 The task is episodic where each episode terminates after 300 steps. The environment is considered solved when the trained agent obtains an average score of 13 over 100 consecutive episodes.
+
 
 ### Installation Instructions and Dependencies
 
@@ -45,6 +47,7 @@ Follow the instructions below to run the code in this respository:
    `cd deep-reinforcement-learning/python`
    
    `pip install .`
+
 
 
 ### Training the Agent
