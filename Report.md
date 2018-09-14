@@ -59,7 +59,7 @@ The performance of the agent might be improved by considering the following:
 
 - Hyperparameter optimisation 
 
-  Many hyperparameters listed above were treated as fixed. These could be tuned to improve performance.
+  Many of the hyperparameters listed above were treated as fixed. These could be tuned to improve performance.
 
 - Duelling DQN or other learning algorithms
 
