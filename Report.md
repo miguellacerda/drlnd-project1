@@ -3,7 +3,7 @@
 
 ### Description of Implementation
 
-The environment is solved using a deep Q-network with fixed targets and experience replay. Training proceeds as follows:
+The environment is solved using a deep Q-network (DQN) with fixed targets and experience replay. Training proceeds as follows:
 
 1. The agent receives a state vector from the environment
 1. Based on the current state, the agent chooses an action that is epsilon-greedy with respect to the local Q-network
@@ -42,14 +42,27 @@ This project considers three variations of the deep Q-learning algorithm:
 
 #### Model Architecture and Hyperparameters
 
+The mapping from states to actions was modelled with a feedforward deep neural network with a 37-dimensonal input layer and a 4-dimensional output layer. The number of hidden layers, the number of neurons within each hidden layer and the activation functions applied to each layer are hyperparameters that must be selected. In this project, the ReLU activation function was used for all hidden layers and a linear activation function was applied to the output layer. Various network architectures were considered:
+
+- 2 hidden layers with 64 neurons each
+- 2 hidden layers with 128 neurons in the first layer and 68 neurons in the second layer
+- 4 hidden layers with 256, 128, 64 and 32 neurons each (moving from the input layer to the ouput layer)
+
+
 ### Results
 
 A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward (over 100 episodes) of at least +13. The submission reports the number of episodes needed to solve the environment. 
 
 ### Future Plans for Improvement
 
-The submission has concrete future ideas for improving the agent's performance.
+The performance of the agent might be improved by considering the following:
 
-- duelling
-- hyperpameter optimisation
-- code optimation - especialy prioritsed replay
+- Hyperparameter optimisation 
+
+  Many hyperparameters listed above were treated as fixed. These could be tuned to improve performance.
+
+- Duelling DQN or other learning algorithms
+
+  One could consider using a duelling DQN that predicts the state-value function *V(s)* and advantages *A(s,a)* of taking each action within a given state. One could also consider algorithms other than DQNs. 
+
+Further work is also required to optimise the code for training. In particular, the current implementation of prioritised replay is very slow and additional work is required to make this more computationally efficient.
