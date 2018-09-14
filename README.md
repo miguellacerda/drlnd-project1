@@ -1,10 +1,4 @@
-# drlnd-project1
-Udacity Deep Reinforcement Learning Nanodegree: Project 1 - Navigation
-
-The README has instructions for installing dependencies or downloading needed files.
-
-The README describes how to run the code in the repository, to train the agent. 
-
+# Udacity Deep Reinforcement Learning Nanodegree: Project 1 - Navigation
 
 ### Description of Environment
 
@@ -51,6 +45,14 @@ Follow the instructions below to run the code in this respository:
    `cd deep-reinforcement-learning/python`
    
    `pip install .`
+
+
+### Training the Agent
+
+The README describes how to run the code in the repository, to train the agent. 
+
+
+
 
 
    
