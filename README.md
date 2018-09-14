@@ -48,6 +48,7 @@ Follow the instructions below to run the code in this respository:
    
    `pip install .`
 
+1. Download the Unity environment (available [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip) for macOS)
 
 
 ### Training the Agent
