@@ -5,13 +5,13 @@
 
 The environment is solved using a deep Q-network with fixed targets and experience replay. Training proceeds as follows:
 
-1. The agent receives a state vector from the enviroment
+1. The agent receives a state vector from the environment
 1. Based on the current state, the agent chooses an action that is epsilon-greedy with respect to the local Q-network
 1. The agent then receives the next state vector and a reward from the environment (as well as a termination signal that indicates if the episode is complete)
 1. The experience tuple `(state, action, reward, next state)` is added to the replay buffer
-1. Every fixed number of steps, a sample is drawn from the replay buffer (assuming it contains enough tuples)
+1. Every fixed number of steps, a sample of experience tuples is drawn from the replay buffer (assuming it contains enough tuples)
 1. The sample is used to update the weights of the local Q-network, which are in turn used to adjust the weights of the target Q-network using a soft-update rule
-1. The state that was observed in step (3) then becomes the current state and the processes repeats from step (2)
+1. The state that was obtained in step (3) then becomes the current state and the processes repeats from step (2)
 
 #### Learning Algorithms
 
