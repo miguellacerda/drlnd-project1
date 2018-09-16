@@ -55,7 +55,7 @@ All agents were trained for 2000 episodes. The plots below show the average scor
 
 ![alt text](all_scores.png)
 
-The number of episodes required for the average score to first equal or exceed 13.0 and the maximum average observed over the 2000 training episodes are shown in the table below (each cell indicates episodes/ max score).
+The number of episodes required for the average score to first equal or exceed 13.0 and the maximum average observed over the 2000 training episodes are given in the table below (each cell reports episodes/max score).
 
 
 | Architecture        | Vanilla DQN         | Double DQN          | Double DQN with PER |
@@ -64,7 +64,7 @@ The number of episodes required for the average score to first equal or exceed 1
 | 128 x 64            | 917 /                | 1055 /             | 1125 /              |
 | 256 x 128 x 64 x 32 | 964 /                | 1056 /             | 1258 /              |
 
-The results suggest that a vanilla DQN was a relatively small, fully-connected neural network (two hidden layers with 64 neurons each) is sufficient to train a successful agent. However, the mean score exhibits large fluctuations even after it has plateaued. This suggests that the agent is spending too much time exploring, rather than exploiting the learned Q-network. The results above were obtained by allowing epsilon to decrease linearly from 1.0 to 0.1 in steps of 0.001. To reduce the degree of exploration, we next considered an agent with an epsilon that decays exponentially by a factor of 0.995 from 1.0 all the way down to 0.01. The results are shown below.
+The results suggest that a vanilla DQN was a relatively small, fully-connected neural network (two hidden layers with 64 neurons each) is sufficient to train a successful agent. However, the mean score exhibits large fluctuations even after it has plateaued. This suggests that the agent is spending too much time exploring, rather than exploiting the learned Q-network. The results above were obtained by allowing epsilon to decrease linearly from 1.0 to 0.1 in steps of 0.001. To reduce the degree of exploration, we next considered an agent with an epsilon that decays exponentially by a factor of 0.995 from 1.0 all the way down to 0.01. The results are shown below for the smallest neural network.
 
 
 ### Future Plans for Improvement
