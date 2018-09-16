@@ -25,7 +25,7 @@ This project considers three variations of the deep Q-learning algorithm:
 
 ##### All Deep Q-Networks
 
-- `epsilon` controls the degree of exploration vs exploitation of the agent in selecting its actions. `epsilon = 0` implies that the agent is greedy with respect to the Q-network (pure exploitation) and `epsilon = 1` implies that the agent selects actions completely randomly (pure exploration). In this project, `epsilon` is annealed from 1.0 to 0.1 in steps of 0.001 after each episode, and remains fixed at 0.1 therafter.
+- `epsilon` controls the degree of exploration vs exploitation of the agent in selecting its actions. `epsilon = 0` implies that the agent is greedy with respect to the Q-network (pure exploitation) and `epsilon = 1` implies that the agent selects actions completely randomly (pure exploration). In this project, `epsilon` was initially annealed from 1.0 to 0.1 in steps of 0.001 after each episode, and remained fixed at 0.1 therafter. This was subsequently adapted to decay exponentially by a factor of 0.995 per episode from 1.0 to 0.01
 - `GAMMA = 0.99` is the discount factor that controls how far-sighted the agent is with respect to rewards. `GAMMA = 0` implies that only the immediate reward is important and `GAMMA = 1.0` implies that all rewards are equally important, irrespective whether they are realised soon and much later
 - `TAU = 0.001` controls the degree to which the target Q-network parameters are adjusted toward those of the local Q-network. `TAU = 0` implies no adjustment (the target Q-network does not ever learn) and `TAU = 1` implies that the target Q-network parameters are completelty replaced with the local Q-network parameters
 - `LR = 0.0005` is the learning rate for the gradient descent update of the local Q-network weights
@@ -51,7 +51,21 @@ The mapping from states to actions was modelled with a feedforward deep neural n
 
 ### Results
 
-A plot of rewards per episode is included to illustrate that the agent is able to receive an average reward (over 100 episodes) of at least +13. The submission reports the number of episodes needed to solve the environment. 
+All agents were trained for 2000 episodes. The plots below show the average score obtained during training over the last 100 episodes for the DQN, double DQN and double DQN with prioritised experience replay algorithms, and for each of the three network architectures described above. The vertical lines indicate the number of episodes required for the average score to first equal or exceed 13.0.
+
+![alt text](all_scores.png)
+
+The number of episodes required for the average score to first equal or exceed 13.0 and the maximum average observed over the 2000 training episodes are shown in the table below (each cell indicates episodes/ max score).
+
+
+| Architecture        | Vanilla DQN         | Double DQN          | Double DQN with PER |
+| ------------------- | ------------------- | ------------------- | ------------------- |
+| 64 x 64             | 919 /                | 958 /              | 1083 /              |
+| 128 x 64            | 917 /                | 1055 /             | 1125 /              |
+| 256 x 128 x 64 x 32 | 964 /                | 1056 /             | 1258 /              |
+
+The results suggest that a vanilla DQN was a relatively small, fully-connected neural network (two hidden layers with 64 neurons each) is sufficient to train a successful agent. However, the mean score exhibits large fluctuations even after it has plateaued. This suggests that the agent is spending too much time exploring, rather than exploiting the learned Q-network. The results above were obtained by allowing epsilon to decrease linearly from 1.0 to 0.1 in steps of 0.001. To reduce the degree of exploration, we next considered an agent with an epsilon that decays exponentially by a factor of 0.995 from 1.0 all the way down to 0.01. The results are shown below.
+
 
 ### Future Plans for Improvement
 
