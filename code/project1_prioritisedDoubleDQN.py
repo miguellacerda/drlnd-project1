@@ -1,6 +1,3 @@
-import os
-os.chdir('/Users/miguel/Documents/Courses/deep-reinforcement-learning/p1_navigation')
-
 from unityagents import UnityEnvironment
 from prioritised_double_dqn_agent import Agent
 import torch
