@@ -51,18 +51,18 @@ Follow the instructions below to run the code in this respository:
 1. Download the Unity environment (available [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip) for macOS)
 
 
-### Code Description and Final Weights
+### Code Description
 
 All of the files below can be found in the code folder.
 
-##### Module Descriptions
+#### Module Descriptions
 
 - `model.py` defines the Q-network architecture
 - `dqn_agent.py` defines a DQN agent
 - `double_dqn_agent.py` defines a double DQN agent
 - `prioritised_ double_dqn_agent.py` defines a double DQN agent with prioritised experience replay
 
-##### Training the Agent
+#### Training the Agent
 
 Both of these files can be run by invoking python 3 at the command line:
 
@@ -70,7 +70,7 @@ Both of these files can be run by invoking python 3 at the command line:
 - `project1_prioritisedDoubleDQN.py` is used to train a double DQN agent with prioritised experience replay
 
 
-##### The Trained Agent
+#### The Trained Agent
 
 - `trained_agent_weights.pth` contains the weights of the best Q-network (see Report.md)
 - `trained_agent.py` loads the optimised weights and runs the trained agent for 1 episode
