@@ -60,9 +60,9 @@ The number of episodes required for the average score to first equal or exceed 1
 
 | Architecture        | Vanilla DQN         | Double DQN          | Double DQN with PER |
 | ------------------- | ------------------- | ------------------- | ------------------- |
-| 64 x 64             | 919 /                | 958 /              | 1083 /              |
-| 128 x 64            | 917 /                | 1055 /             | 1125 /              |
-| 256 x 128 x 64 x 32 | 964 /                | 1056 /             | 1258 /              |
+| 64 x 64             | 919 / 14.46         | 958 / 14.52         | 1083 / 14.89        |
+| 128 x 64            | 917 / 14.25         | 1055 / 14.58        | 1125 / 13.93        |
+| 256 x 128 x 64 x 32 | 964 / 14.02         | 1056 / 14.44        | 1258 / 14.05        |
 
 The results suggest that a vanilla DQN with a relatively small, fully-connected Q-network (two hidden layers with 64 neurons each) is sufficient to train a successful agent. Interestingly, prioritised experience replay takes longer to solve the environment than the other two algorithms. In all cases, the mean score exhibits large fluctuations even after it has plateaued. This suggests that the agent is spending too much time exploring, rather than exploiting the learned Q-network. The results above were obtained by allowing epsilon to decrease linearly from 1.0 to 0.1 in steps of 0.001. To reduce the degree of exploration, we next considered an agent with an epsilon that decays exponentially by a factor of 0.995 from 1.0 all the way down to 0.01. The results are shown below for the smallest neural network.
 
