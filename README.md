@@ -53,7 +53,10 @@ Follow the instructions below to run the code in this respository:
 
 ### Training the Agent
 
-The README describes how to run the code in the repository, to train the agent. 
+##### Module Descriptions
+
+- `model.py`
+   Defines the Q-network architecture
 
 
 
