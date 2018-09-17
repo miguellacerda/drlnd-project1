@@ -68,7 +68,7 @@ The results suggest that a vanilla DQN with a relatively small, fully-connected 
 
 ![alt text](final_scores.png)
 
-When epsilon decays at a faster rate and to a lower minimum value, the agent solves the environment significantly faster and obtains a much higher maximum average score over 2000 epsiodes. As before, the agent takes longer with prioritised experience replay and does not achieve a better a better average score.
+When epsilon decays at a faster rate and to a lower minimum value, the agent solves the environment significantly faster and obtains a much higher maximum average score over 2000 epsiodes. As before, the agent takes longer with prioritised experience replay and does not achieve a better average score.
 
 | DQN Variant         | Required Episodes   | Max Average Score   | 
 | ------------------- | ------------------- | ------------------- |
