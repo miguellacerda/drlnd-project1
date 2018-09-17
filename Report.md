@@ -53,7 +53,7 @@ The mapping from states to actions was modelled with a feedforward deep neural n
 
 All agents were trained for 2000 episodes. The plots below show the average score obtained during training over the last 100 episodes for the DQN, double DQN and double DQN with prioritised experience replay algorithms, and for each of the three network architectures described above. The vertical lines indicate the number of episodes required for the average score to first equal or exceed 13.0.
 
-![alt text](all_scores.png)
+![all_scores.png](all_scores.png)
 
 The number of episodes required for the average score to first equal or exceed 13.0 and the maximum average observed over the 2000 training episodes are given in the table below (each cell reports episodes/max score).
 
@@ -66,7 +66,7 @@ The number of episodes required for the average score to first equal or exceed 1
 
 The results suggest that a vanilla DQN with a relatively small, fully-connected Q-network (two hidden layers with 64 neurons each) is sufficient to train a successful agent. Interestingly, prioritised experience replay takes longer to solve the environment than the other two algorithms. In all cases, the mean score exhibits large fluctuations even after it has plateaued. This suggests that the agent is spending too much time exploring, rather than exploiting the learned Q-network. The results above were obtained by allowing epsilon to decrease linearly from 1.0 to 0.1 in steps of 0.001. To reduce the degree of exploration, we next considered an agent with an epsilon that decays exponentially by a factor of 0.995 from 1.0 all the way down to 0.01. The results are shown below for the smallest neural network.
 
-![alt text](final_scores.png)
+![final_scores.png](final_scores.png)
 
 When epsilon decays at a faster rate and to a lower minimum value, the agent solves the environment significantly faster and obtains a much higher maximum average score over 2000 epsiodes. As before, the agent takes longer with prioritised experience replay and does not achieve a better average score.
 
@@ -80,7 +80,7 @@ Based on these results, we provide the weights that achieved the maximum average
 
 Here is the trained agent in action:
 
-![alt text](trained_agent.gif)
+![trained_agent.gif](trained_agent.gif)
 
 
 ### Future Plans for Improvement
