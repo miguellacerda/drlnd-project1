@@ -55,8 +55,10 @@ Follow the instructions below to run the code in this respository:
 
 ##### Module Descriptions
 
-- `model.py`
-   Defines the Q-network architecture
+- `model.py` Defines the Q-network architecture
+- `dqn_agent.py` Defines a DQN agent
+- `double_dqn_agent.py` Defines a double DQN agent
+- `prioritised_ double_dqn_agent.py` Defines a double DQN agent with prioritised experience replay
 
 
 
