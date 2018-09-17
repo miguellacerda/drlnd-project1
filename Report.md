@@ -78,6 +78,11 @@ When epsilon decays at a faster rate and to a lower minimum value, the agent sol
 
 Based on these results, we provide the weights that achieved the maximum average score of 16.81 after 1154 episodes of training with the double DQN algorithm and a fully connected, feedforward Q-network with 2 hidden layers with 64 neurons each. These can be loaded as described in the README.
 
+Here is the trained agent in action:
+
+![alt text](trained_agent.gif)
+
+
 ### Future Plans for Improvement
 
 The performance of the agent might be improved by considering the following:
